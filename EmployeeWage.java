@@ -1,7 +1,11 @@
 package com.bz.employeewage;
 
 public class EmployeeWage {
-	
+
+	int wagePerHours = 20;
+	int dailyHours = 8;
+	int dailyWage;
+
 	public void employeeAttdence() {
 		int empCheck = (int) (Math.random() * 10) % 2;
 		System.out.println(empCheck);
@@ -12,10 +16,16 @@ public class EmployeeWage {
 		}
 	}
 
+	public void dailyWage() {
+		dailyWage = wagePerHours * dailyHours;
+		System.out.println("Employee Daily wage = " + dailyWage);
+	}
+
 	public static void main(String[] args) {
 		EmployeeWage object = new EmployeeWage();
 		object.employeeAttdence();
-		
+		object.dailyWage();
+
 	}
 
 }
