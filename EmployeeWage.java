@@ -5,6 +5,8 @@ public class EmployeeWage {
 	int wagePerHours = 20;
 	int dailyHours = 8;
 	int dailyWage;
+	int partTimeWage;
+	int partTimeHours = 4;
 
 	public void employeeAttdence() {
 		int empCheck = (int) (Math.random() * 10) % 2;
@@ -21,10 +23,17 @@ public class EmployeeWage {
 		System.out.println("Employee Daily wage = " + dailyWage);
 	}
 
+	public void employeePartTimeWage() {
+
+		partTimeWage = wagePerHours * partTimeHours;
+		System.out.println("Employee Part Time Wage :" + partTimeWage);
+	}
+
 	public static void main(String[] args) {
 		EmployeeWage object = new EmployeeWage();
 		object.employeeAttdence();
 		object.dailyWage();
+		object.employeePartTimeWage();
 
 	}
 
